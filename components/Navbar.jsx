@@ -14,7 +14,8 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex h-16 items-center justify-between">
             {/* logo */}
-            <Link href="/" className="text-2xl font-bold text-white">
+            <Link href="/" className="flex items-center justify-center text-2xl font-bold text-white">
+            <img src="logo!.png" alt="Logo of the company" className="size-25"/>
               Pratik <span className=" text-red-400 italic">Karki</span>
             </Link>
 
