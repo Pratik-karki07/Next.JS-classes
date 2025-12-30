@@ -10,27 +10,27 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="fixed top-0 z-50 w-full bg-zinc-950/90 backdrop-blur border border-bottom-red-500">
+      <nav className="fixed top-0 z-50 w-full bg-zinc-950/90 backdrop-blur border-b-2 border-purple-800 ">
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex h-16 items-center justify-between">
             {/* logo */}
             <Link href="/" className="flex items-center justify-center text-2xl font-bold text-white">
-            <img src="logo!.png" alt="Logo of the company" className="size-25"/>
-              Pratik <span className=" text-red-400 italic">Karki</span>
+            <img src="/loogoo.png" alt="Logo of the company" className="size-25"/>
+              Pratik <span className=" text-red-500 italic">Karki</span>
             </Link>
 
             {/* Desktop Menu */}
             <div className=" hidden md:flex items-center gap-8 text-sm">
               <NavItem href="/">Home</NavItem>
-              <NavItem href="/services">Services</NavItem>
-              <NavItem href="/projects">Projects</NavItem>
+              <NavItem href="/about">About</NavItem>
+              <NavItem href="/project">Projects</NavItem>
               <NavItem href="/blogs">Blogs</NavItem>
-              <NavItem href="/contacts">Contact Us</NavItem>
+              <NavItem href="/contact">Contact</NavItem>
             </div>
 
             {/* Get Started Button  */}
             <div className=" hidden  md:block">
-              <button className=" bg-red-400 py-1  px-6 rounded-4xl hover:bg-amber-800/80 transition ">
+              <button className=" bg-red-500 py-1  px-6 rounded-4xl hover:bg-red-500/60 transition text-white ">
                 Get Started
               </button>
             </div>
@@ -57,8 +57,7 @@ export default function Navbar() {
 
       {/* Mobile Sidebar */}
       <sidebar
-        className={`fixed left-0 top-0 z-50 h-full w-72 bg-zinc-950 border-r border-zinc-800 transform transition-transform duration-300 ${
-          open ? "translate-x-0" : "-translate-x-full"
+        className={`fixed left-0 top-0 z-50 h-full w-72 bg-zinc-950 border-r border-zinc-800 transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-zinc-800">
@@ -74,7 +73,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div className=" flex flex-col gap-2 p-4 text-sm">
           <MobileNavItem href="/">Home</MobileNavItem>
-          <MobileNavItem href="/services">Services</MobileNavItem>
+          <MobileNavItem href="/about">About</MobileNavItem>
           <MobileNavItem href="/projects">Projects</MobileNavItem>
           <MobileNavItem href="/blogs">Blogs</MobileNavItem>
           <MobileNavItem href="/contacts">Contact Us</ MobileNavItem>
