@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import {motion} from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,16 +25,9 @@ export default function Navbar() {
               <NavItem href="/">Home</NavItem>
               <NavItem href="/about">About</NavItem>
               <NavItem href="/project">Projects</NavItem>
-              <NavItem href="/blogs">Blogs</NavItem>
               <NavItem href="/contact">Contact</NavItem>
             </div>
 
-            {/* Get Started Button  */}
-            <div className=" hidden  md:block">
-              <button className=" bg-red-500 py-1  px-6 rounded-4xl hover:bg-red-500/60 transition text-white ">
-                Get Started
-              </button>
-            </div>
 
              {/* Mobile Menu Button  */}
             <button
@@ -74,16 +68,10 @@ export default function Navbar() {
         <div className=" flex flex-col gap-2 p-4 text-sm">
           <MobileNavItem href="/">Home</MobileNavItem>
           <MobileNavItem href="/about">About</MobileNavItem>
-          <MobileNavItem href="/projects">Projects</MobileNavItem>
-          <MobileNavItem href="/blogs">Blogs</MobileNavItem>
+          <MobileNavItem href="/project">Projects</MobileNavItem>
           <MobileNavItem href="/contacts">Contact Us</ MobileNavItem>
 
-          <button className=" bg-red-400 py-1  px-6 rounded-4xl hover:bg-amber-800/80 transition ">
-            Get Started
-          </button>
-
         </div>
-
 
       </sidebar>
     </>

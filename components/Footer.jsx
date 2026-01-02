@@ -6,11 +6,11 @@ import Link  from "next/link";
 
 export default function Footer(){
   return(
-    <div className="max-w-screen">
-      <div className=" mt-40 relative bg-zinc-950/90 md:grid grid-cols-4   ">
+    <div className="max-w-full">
+      <div className=" mt-40 relative bg-zinc-950/90 grid grid-cols-1 md:grid-cols-4   ">
         <div className="mx-8 ">
           <div className=" mt-4 mb-4 flex items-center gap-2">
-            <img src="/loogoo.png" alt="Logo of the company" className=" size-15" />
+            <img src="/loogoo.png" alt="Logo of the company" className=" size-16" />
               <p className="text-xl font-bold text-white">
                 Pratik <span className=" text-red-400 italic">Karki</span>
               </p>
@@ -82,8 +82,8 @@ export default function Footer(){
 
         
       </div>
-        <div className="  flex justify-center text-center border-t-gray-500 bg-zinc-950/90 ">
-          <p className="text-zinc-300 mx-8  border-t-2  border-purple-800 min-w-250 mb-2 ">
+        <div className="  flex justify-center text-center border-t-2 border-gray-500 bg-zinc-950/90 ">
+          <p className="text-zinc-300 mx-8  border-t-2  border-purple-800 w-full max-w-6xl mb-2 ">
              {new Date().getFullYear()}.  All rights reserved.
           </p>
         </div>

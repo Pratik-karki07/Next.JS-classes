@@ -21,12 +21,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body 
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`} 
       >
         <Navbar />
         <main>{children}</main>
-        <Footer />
+        <Footer  className="w-full overflow-x-hidden wrap-break-words" />
       </body>
     </html>
   );

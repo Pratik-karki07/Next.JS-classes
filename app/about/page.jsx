@@ -6,15 +6,14 @@ import Link from "next/link";
 
 export default function About(){
   return(
-    <div className="mt-17 min-h-screen max-w-screen">
+    <div className="mt-17 min-h-screen max-w-full overflow-x-hidden">
       <motion.div
       initial={{opacity:0, x:100}}
       whileInView={{opacity:1, x:0}}
       transition={{duration: 0.8, ease:'easeOut'}}
-      className="md:grid"
       >
-        <div className="grid grid-cols-3">
-          <div className="ml-20 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 px-4 md:px-20">
+          <div className="mt-10">
             <h1 className=" font-bold italic text-3xl ">
               Pratik Karki
             </h1>
@@ -53,7 +52,7 @@ export default function About(){
             both technically and creatively.
           </p>
           
-          <img src="/Passportsize.jpg" alt="Photo of Pratik" className=" size-65 rounded-full mt-5 ml-20 mr-10"/>
+          <img src="/Passportsize.jpg" alt="Photo of Pratik" className="size-65 rounded-full mt-5 mx-auto md:ml-20 md:mr-10 max-w-full"/>
         </div>
       </motion.div>
 
@@ -63,9 +62,9 @@ export default function About(){
       transition={{duration: 0.8, ease:'easeOut'}}
       className="md:grid"
       >  
-        <div className=" mt-5 py-5 border-t-2 border-red-500  bg-zinc-950/90  text-zinc-300 grid grid-cols-3 ">
-          <div className="ml-20 ">
-            <img src="/skills.jpg" className=" size-60  rounded-full"/>
+        <div className=" mt-5 py-5 border-t-2 border-red-500  bg-zinc-950/90  text-zinc-300 grid grid-cols-1 md:grid-cols-3 px-4 md:px-20">
+          <div className="mx-auto md:mx-0 md:ml-20">
+            <img src="/skills.jpg" className=" size-60  rounded-full max-w-full"/>
           </div>
 
           <div>
@@ -101,32 +100,47 @@ export default function About(){
         className=" w-full"
         > 
           <div className="border-t-2 border-red-500">
-            <div className=" px-6 md:px-20 mt-5 max-w-7xl mx-auto">
+            <div className=" px-4 md:px-6 lg:px-20 mt-5 max-w-7xl mx-auto overflow-x-auto">
               <h1 className="font-bold text-3xl ">
                 Educational Background:
               </h1>
-              <div className="grid grid-cols-3">
-                <ul  className=" mt-5 ml-5 list-disc">
-                  <li>Sandipani Gyan Mandir English School</li>
-                  <li>The Times International College</li>
-                  <li>Bhaktapur Multiple Campus</li>
-                  
-                  
-                </ul>
+              <div className="grid grid-cols-1">
+                <table className=" mt-8 w-full  bg-zinc-950/90  text-zinc-300 overflow-x-auto">
+                
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Institution</th>
+                      <th>Location</th>
+                      <th>Educational Degree</th>
+                    </tr>
+                  </thead> 
 
-                <ul  className=" mt-5 ml-5 list-none ">
-                  <li>Sankhu, Kathmandu</li>
-                  <li>Dillibazar, Kathmandu</li>
-                  <li>Dudhpati,  Bhaktapur</li>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Sandipani Gyan Mandir English School</td>
+                      <td>Sankhu, Kathmandu</td>
+                      <td>Primary  Schooling</td>
+                    </tr>                   
+
+                    <tr>
+                      <td>2.</td>
+                      <td>The Times International College</td>
+                      <td>Dillibazar, Kathmandu</td>
+                      <td>Higher Secondary Schooling</td>
+                    </tr>  
+
+                    <tr>
+                      <td>3.</td>
+                      <td>Bhaktapur Multiple Campus</td>
+                      <td>Dudhpati,  Bhaktapur</td>
+                      <td>Bachelor Degree</td>
+                    </tr>                                  
+                  </tbody>
                   
-                  
-                </ul>
-                <ul  className=" mt-5 mx-5 list-none ">
-                  <li>Primary  School</li>
-                  <li>Higher Secondary Schooling</li>
-                  <li>Primary  School</li>
-                  
-                </ul>
+                </table>
+    
               </div>
             </div>
 
